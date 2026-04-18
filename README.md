@@ -43,28 +43,6 @@ This repository contains a complete reference-based RNA-Seq data analysis pipeli
 
 
 
-## 🔧 Complete Workflow
-
-\```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   FASTQ     │ →  │   Falco     │ →  │  Cutadapt   │ →  │    STAR     │
-│   (Raw)     │    │   (QC)      │    │  (Trimming) │    │  (Mapping)  │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-                                                               │
-                                                               ▼
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   DESeq2    │ ←  │ featureCounts│ ←  │   IGV /     │ ←  │    BAM      │
-│    (DE)     │    │  (Counting)  │    │  JBrowse2   │    │   (Aligned) │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-       │
-       ▼
-┌─────────────┐
-│   Heatmap   │
-│ (Correlation)│
-└─────────────┘
-\```
-
-
 
 ## 📊 Results
 
@@ -238,33 +216,6 @@ This repository contains a complete reference-based RNA-Seq data analysis pipeli
 - Energy metabolism pathways are responsive to PS depletion
 - Suggests cross-talk between splicing regulation and metabolic control
 
-
-
-
-
-## 📁 Repository Structure
-
-\```
-RNA-Seq-Reference-Based-Pipeline/
-├── README.md
-├── reports/
-│   ├── MultiQC_report.html
-│   ├── STAR_logs/
-│   │   ├── STAR_GSM461177_log.out
-│   │   └── STAR_GSM461180_log.out
-│   └── DESeq2_results/
-│       ├── DESeq2_normalized_counts.csv
-│       └── DESeq2_significant_genes.csv
-├── screenshots/
-│   ├── IGV_chr4_540000-560000.png
-│   ├── JBrowse2_view.png
-│   ├── heatmap.jpg
-│   ├── GO.jpg
-│   └── kegg_pathway.jpg
-└── galaxy_workflow/
-    ├── workflow.ga
-    └── parameters.json
-\```
 
 
 
